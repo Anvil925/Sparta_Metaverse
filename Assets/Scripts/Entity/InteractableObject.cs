@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;  // 씬 전환을 위한 네임스페이스
 
 public class InteractableObject : MonoBehaviour
 {
@@ -39,7 +39,8 @@ public class InteractableObject : MonoBehaviour
 
     private void Interact()
     {
-        Debug.Log("상호작용 실행!");
-        interactionUI.SetActive(false); // UI 숨김
+        Debug.Log("미니게임 씬으로 전환!");
+        // "MiniGameScene"을 실제 씬 이름으로 교체
+        SceneManager.LoadScene("MiniGameScene");  // 미니게임 씬으로 전환
     }
 }
